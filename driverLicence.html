@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+     
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      text-align: center;
+      width: 350px;
+    }
+
+    h1 {
+      color: #333;
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-weight: bold;
+      margin-bottom: 10px;
+      display: block;
+      color: #444;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    input:focus {
+      border-color: #4CAF50;
+    }
+
+    button {
+      background: #4CAF50;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #45a049;
+    }
+
+    #result {
+      margin-top: 15px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+    <div class="container">
+     <h1>Eligibility Test for driver Licence</h1>
+     <label for="">Enter your age</label>
+     <input type="text" name="" id="demo">
+      <button onclick="eligiblityTest()">Know your eligibility </button>
+     <p id="result"></p>
+
+     </div>
+ <script>
+      function eligiblityTest(){
+     let age = Number(document.getElementById("demo").value);
+     
+      if(age >= 18){
+         document.getElementById("result").innerHTML = "You are eligible to apply for driver Licence. ";
+
+      }else if(age<18){
+         document.getElementById("result").innerHTML = "You are not eligible for it. ";
+      }else{
+         document.getElementById("result").innerHTML = "Please enter valid value";
+      }
+      }
+ </script>
+  
+</body>
+</html>
