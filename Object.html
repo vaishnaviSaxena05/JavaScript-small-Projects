@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p id="demo"></p>
+  <p id="demo-1"> </p>
+  <script>
+       const student = {
+           FirstName : "Bob",
+           LastName : "Viswas",
+           Age : 23,
+           class : {
+                  Subjects : ["Math", "Science", "Hindi", "Samskrutam", "Social science"]
+
+           }
+       
+       }
+       let value = ""
+        for (let i in student) {
+       // ✅ skip the class object
+       if (i !== "class") {   // ✅ skip the class object
+        value += i + ": " + student[i] + "<br>";
+      }
+    
+    }
+        document.getElementById("demo").innerHTML = value;
+let subjects = student.class.Subjects.join(", ");
+    document.getElementById("demo-1").innerHTML = "Subjects: " + subjects;
+  </script>
+
+</body>
+</html>
